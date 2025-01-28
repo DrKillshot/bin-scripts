@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Runs a command a given number of times.
+# API: rt <number-of-times-to-run> <command-to-run>
+# Example: rt 30 echo "Hello world!"
+
+for i in $(seq 1 $1); do
+  "$2" "${@:3}"
+done
